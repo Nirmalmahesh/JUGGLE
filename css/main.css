@@ -4,24 +4,57 @@
     overflow-x: hidden;
 }
 .building{
+    background-position: center;
     background-image: url("../images/newbuilding.jpg");
     height: 700px;
-    width: 2800px;
-    animation: road 4s infinite linear;    
+    width: 4000px;
+    animation: road 10s infinite linear;    
 }
 .road{
     background-image: url("../images/road.jpg");
     height: 155px;
-    width: 3600px;
-    animation: road 4s infinite linear;
+    width: 4000px;
+    animation: road 10s infinite linear;
     border: 0px;
     margin: 0px;
     padding: 0px;
+    background-repeat: repeat-x;
     
+}
+.bus{
+    position: absolute;
+    background-image: url(../images/bus.png);
+    transform: scaleX(-1);
+    height: 411px;
+    width: 545px;
+    left: 25%;
+    background-size: cover;
+    bottom: 5%;
+    background-repeat: repeat-x;
+
 }
 @keyframes road
 {
  100%{
     transform:translateX(-1200px);
 }
+}
+.bus-stop{
+    background-image: url(../images/bus-stop.png);
+    height: 378px;
+    width: 372px;
+    background-size: cover;
+    right: 5%;
+    bottom: 5%;
+    position: absolute;
+    z-index: auto;
+    display: none;
+    animation: bus-stop 10s infinite linear;
+}
+@keyframes bus-stop
+{
+ /* 80%{
+    transform:translateX(-1200px);
+    display: inline-block;
+} */
 }
