@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+.building{
+    background-image: url("../images/newbuilding.jpg");
+    height: 700px;
+    width: 2800px;
+    animation: road 4s infinite linear;    
+}
+.road{
+    background-image: url("../images/road.jpg");
+    height: 155px;
+    width: 3600px;
+    animation: road 4s infinite linear;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+@keyframes road
+{
+ 100%{
+    transform:translateX(-1200px);
+}
+}
