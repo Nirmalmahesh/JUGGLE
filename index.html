@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,23 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Juggle</title>
 </head>
-<body>
+
+<body onload="stopAnimation()">
+
     <div class="container">
-        <div class="building">            
+        <div class="building" id="building" onclick="clearPause()">
+            <div class="bus-stop-contaier">
+                <img src="./images/bus-stop.png" alt="bus-stop" class="bus-stop" id="bus-stop">
+            </div>
         </div>
-        <div class="road">            
-             
+        <div class="road" id="road">
         </div>
-        <div class="bus-stop">
-        </div>
+
         <div class="bus">
         </div>
-        
     </div>
+
+
 </body>
+<script src="./js/index.js"></script>
 </html>
