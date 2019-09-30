@@ -4,4 +4,3 @@ stopAnimation = async() =>{
         bus.style.animationPlayState = "paused";
     },8000);
  }
- 
