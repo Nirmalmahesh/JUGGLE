@@ -3,6 +3,7 @@
 //level 3 8s
 
 stopAnimation = async() =>{
+    loadMusic();
     await setTimeout(()=>{
         let building = document.getElementById("building");
         let road = document.getElementById("road");
@@ -14,6 +15,11 @@ stopAnimation = async() =>{
 
     },4500);
     
+}
+loadMusic = () =>{
+    let music = new Audio();
+    music.src = "../music/second.mp3";
+    music.play();
 }
 clearPause = () =>{
     let building = document.getElementById("building");
@@ -91,6 +97,7 @@ startGame = () =>{
         console.log("default Passengers "+defaultPassengers);
         console.log("Answer : ",(defaultPassengers+created)-dropped);
         answer = (defaultPassengers+created)-dropped;
+        defaultPassengers = answer;
         
     }else if(level == 2){
         let delayRandom = getRandomIntInclusive(800,1000);
@@ -104,6 +111,7 @@ startGame = () =>{
         console.log("default Passengers "+defaultPassengers);
         console.log("Answer : ",(defaultPassengers+created)-dropped);
         answer = (defaultPassengers+created)-dropped;
+        defaultPassengers = answer;
     }else if(level == 3){
         let delayRandom = getRandomIntInclusive(500,600);
         let timerRandom = getRandomIntInclusive(7000,9000);
