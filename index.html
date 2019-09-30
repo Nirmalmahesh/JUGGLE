@@ -9,9 +9,9 @@
     <title>Juggle</title>
 </head>
 
-<body onload="stopAnimation()">
+<body onload="startGame()">
 
-    <div class="container">
+    <div class="container" id="container">
         <div class="building" id="building" onclick="clearPause()">
             <div class="bus-stop-contaier">
                 <img src="./images/bus-stop.png" alt="bus-stop" class="bus-stop" id="bus-stop">
@@ -19,12 +19,26 @@
         </div>
         <div class="road" id="road">
         </div>
-        <div class="runner"></div>
-        <div class="bus">
+        <div id="runner-container">
+        </div>
+        <div class="bus" id="bus">
+        </div>
+    </div>
+    <div class="modalbox" id="text">
+        <div class="box">
+            <a class="close" href="#">X</a>
+            <p class="title">Enter Your Answer</p>
+            <div class="content">
+                <form>
+                    <input type="text" name="answer" id="answer" placeholder="Enter Your Guess" required>
+                    <input type="button" value="Check Answer" class="btn-success" onclick="validateAnswer()">
+                </form>
+            </div>
         </div>
     </div>
 
 
 </body>
 <script src="./js/index.js"></script>
+
 </html>

@@ -9,7 +9,7 @@
     width: 100%;
     animation: buildings 10s linear infinite;
     background-repeat: repeat-x;    
-    repeat: 0 0;
+    
 }
 .road{
     background-image: url("../images/road.jpg");
@@ -23,6 +23,7 @@
     
 }
 .bus {
+    
     position: absolute;
     background-image: url(../images/bus.png);
     transform: scaleX(-1);
@@ -32,6 +33,7 @@
     background-size: cover;
     bottom: 5%;
     background-repeat: repeat-x;
+    
 }
 @keyframes road
 {
@@ -73,7 +75,20 @@
     width:55px;
     height:85px;
     animation:walk 1s steps(6) infinite,
-                forward 10s linear infinite;
+                forward 10s linear ;
+    display: inline;
+    left: -100px;
+}
+.runner-out{
+    position: absolute;
+    background:url("../images/sprite-boy.png");
+    top:70%;
+    width:55px;
+    height:85px;
+    animation:walk 1s steps(6) infinite,
+                forward-out 10s linear ;
+    display: inline;
+    left: 500px;
 }
 @keyframes walk{
 0%{
@@ -83,12 +98,127 @@
     background-position:373px;
 }
 
+
 }
+
+
 @keyframes forward{
     0%{
         transform: translateX(-100px);
     }
     100%{
-        transform: translateX(1500px);
+        transform: translateX(500px);
     }
 }
+@keyframes forward-out{
+    0%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(1200px);
+    }
+}
+
+
+
+
+
+/* model */
+.modalbox .box {
+    background-color: rgba(0,0,0,0.7);
+    margin: 0 auto;
+    min-width: 210px;
+    padding: 40px;
+    width: 30%;
+    margin-top: 100px;
+    }
+    .modalbox .title {
+    border-bottom: 1px solid #ccc;
+    font-family: verdana;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+    color: #fff;
+        }
+    .modalbox .content {
+    display: block;
+    font-family: Verdana;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 0 0;
+    color: #fff;
+        }
+    .modalbox .close {
+    color: #fff;
+    display: none;
+    float: right;
+    font-family: Verdana;
+    font-size: 22px;
+    height: 25px;
+    text-decoration: none;
+    }
+
+    .btn-success{
+        color: whitesmoke;
+        font-size: 20px;
+        margin-left: 25%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: green;
+        opacity: 1 !important;
+        cursor: pointer;
+    }
+
+
+.modalbox{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color:#333333;
+    opacity: 0.7;
+    border-radius: 10%;
+
+    }
+
+.modalbox:target {
+    display: block;
+    outline: none;
+}
+
+
+.link-modal{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 400px;
+    padding-left: 15px;
+}
+
+
+.link-modal a{
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: Verdana;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Input box*/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
