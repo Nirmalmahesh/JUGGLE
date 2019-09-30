@@ -66,4 +66,29 @@
        transform: translateX(-500px)
    }
 }
+.runner{
+    position: absolute;
+    background:url("../images/sprite-boy.png");
+    top:70%;
+    width:55px;
+    height:85px;
+    animation:walk 1s steps(6) infinite,
+                forward 10s linear infinite;
+}
+@keyframes walk{
+0%{
+    background-position: 0px;
+}
+100%{
+    background-position:373px;
+}
 
+}
+@keyframes forward{
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(1500px);
+    }
+}
