@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.first{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 700px;
+    width: 100%;
+    background-image: url(../images/first.jpg);
+    background-position: center;
+    background-size: cover;
+ }
+ #bus{
+     background-size: cover;
+    position: absolute;
+    background-image: url("../images/bus.png");
+    transform: scaleX(-1);
+    height: 411px;
+    width: 545px;
+    left: 5%;
+    bottom: 5%;
+    animation: bus 10s linear infinite;
+ } 
+    @keyframes bus {
+    0% {left: -600px;
+    }
+    100% {left: 600px;
+    }
+}
+.juggle
+{
+    margin-top: 12rem;
+    font-family: cursive;
+    font-size: 100px;
+    color:rgb(255,203,5);
+}
+.stop{
+    bottom: 30%;
+    width: 80%;
+}
+.click{
+    margin-top: 1rem;
+    font-family: cursive;
+    font-size: 50px;
+    color:rgb(255,237,5);
+} 

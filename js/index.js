@@ -76,6 +76,7 @@ function getRandomIntInclusive(min, max) {
   var level = 1;
   var defaultPassengers = 15;
   var answer = 0;
+  var lifes = 3;
 startGame = () =>{
     stopAnimation();
     if(level == 1){
@@ -121,18 +122,23 @@ validateAnswer = () =>{
     let entered = document.getElementById("answer").value;
     if(Number(entered) == answer){
         document.getElementById("text").style.display = "none";
-        document.getElementById("bus").style.animation = "bus-move 7s ";
+        document.getElementById("bus").style.animation = "bus-move 7s linear";
         if(level == 1){
+            document.getElementById("level").innerHTML = "Level 2";
             level = 2;
             console.clear();
         }else if(level == 2){
+            document.getElementById("level").innerHTML = "Level 3";
             level = 3;
             console.clear();
         }
         startGame();
     }else{
         window.alert("wrong Input");
-        document.getElementById("text").style.display = "none";
+        lifes--;
+       let hearts = document.getElementsByClassName("heart");
+       hearts[0].remove();
+       startGame();
     }
 }
 //getting out
