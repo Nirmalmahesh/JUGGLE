@@ -50,3 +50,32 @@
     font-size: 50px;
     color:rgb(255,237,5);
 } 
+.info{
+    background-size: cover;
+    position: absolute;
+    background-image: url("../images/info.png");
+    height: 50px;
+    width: 50px;
+    /* float: right; */
+    right:10%;
+    top: 10%;
+
+}
+
+.info .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .info:hover .tooltiptext {
+    visibility: visible;
+  }

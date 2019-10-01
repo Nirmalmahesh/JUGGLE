@@ -2,34 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/first.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-  <title>First</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
+    <title>Juggle</title>
 </head>
-<body onload="stopAnimation()" id="body">
-    
-  <div class="first">
-    <div class="stop">
-      <marquee direction="right" class="juggle" scrollamount="6" loop="1" behavior="slide"><b><i>JUGGLE</i></b>
-      </marquee>
-      <marquee direction="right" class="click" scrollamount="6" loop="1" behavior="slide"><i>Press any key to
-          continue</i></marquee>
+
+<body onload="startGame()">
+    <div class="container" id="container">
+        <div class="building" id="building" >
+            <div class="navbar" id="navbar">
+                <p  class="level" id='score'>Score : 0</p>
+                <h4 class="level" id="level">Level 1</h4>
+                <div class="pause" onclick="pauseAnimation()" id="pause-block">
+                    <i class="fas fa-pause fa-2x" id="btn-pause"></i>
+                </div>
+                <div class="reset" onclick="resetGame()" id="reset">
+                    <i class="fas fa-sync fa-2x"></i>
+                </div>
+                <div class="mute" onclick="mute()" id="mute-container">
+                    <i class="fas fa-volume-mute fa-2x" id="mute"></i>
+                </div>
+                <i class="fas fa-heart fa-2x heart"></i>
+                <i class="fas fa-heart fa-2x heart"></i>
+                <i class="fas fa-heart fa-2x heart"></i>
+            </div>
+            <div class="bus-stop-contaier">
+                    
+                <img src="./images/bus-stop.png" alt="bus-stop" class="bus-stop" id="bus-stop">
+            </div>
+        </div>
+        <div class="road" id="road">
+        </div>
+        <div id="runner-container">
+        </div>
+        <div class="bus" id="bus" onclick="pauseAnimation()">
+        </div>
+       
     </div>
-    <div id="bus"></div>
-  </div>
+
+    <div class="gameover" id='gameover'></div><br>
+    <div class="win" id='win'></div><br>
+    <p id="scorecard" class="scorecard"></p>
+    
+    <div class="modalbox" id="text">
+        <div class="box">
+            <a class="close" href="#">X</a>
+            <p class="title">Enter Your Answer</p>
+            <div class="content">
+                <form>
+                    <input type="text" name="answer" id="answer" placeholder="Enter Your Guess" required>
+                    <input type="button" value="Check Answer" class="btn-success" value="" onclick="validateAnswer()">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="./js/first.js"></script>
-<script>
-    $(document).ready(function()
-    {      
-      $("#body").keypress(function(){
-        window.location.href = "./index.html"; 
-      });
-    });
-</script>
+
 
 </html>
