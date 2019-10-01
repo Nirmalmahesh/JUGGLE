@@ -30,11 +30,10 @@
 }
 .navbar-info{
     width: 80%;
-    height: 40px;
+    height: 45px;
     font-size: 25px;
     font-family: cursive;
-    position: absolute;
-    
+    position: absolute;    
     border-radius: 50px;    
     margin-top: 9%;
     margin-left: 11%;
