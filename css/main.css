@@ -28,6 +28,16 @@
     margin-top: 1%;
     margin-left: 11%;
 }
+.navbar-info{
+    width: 80%;
+    height: 70px;
+    background-color: #FFFFFD;
+    position: absolute;
+    opacity: 0.6;
+    border-radius: 50px;    
+    margin-top: 1%;
+    margin-left: 11%;
+}
 .heart{
     color: red;
     position: relative;
@@ -271,8 +281,8 @@ input[type=text], select {
       font-family: cursive;
       text-align: center;
       position: relative;   
-      left: 45%;
-      top: 15%;
+      left: 40%;
+      top: 8%;
       display: inline;
   }
 .gameover{

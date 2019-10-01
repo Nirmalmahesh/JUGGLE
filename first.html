@@ -13,9 +13,9 @@
 
 <body onload="startGame()">
     <div class="container" id="container">
-        <div class="building" id="building" >
+        <div class="building" id="building">
             <div class="navbar" id="navbar">
-                <p  class="level" id='score'>Score : 0</p>
+                <p class="level" id='score'>Score : 0</p>
                 <h4 class="level" id="level">Level 1</h4>
                 <div class="pause" onclick="pauseAnimation()" id="pause-block">
                     <i class="fas fa-pause fa-2x" id="btn-pause"></i>
@@ -30,8 +30,11 @@
                 <i class="fas fa-heart fa-2x heart"></i>
                 <i class="fas fa-heart fa-2x heart"></i>
             </div>
+
+
+
             <div class="bus-stop-contaier">
-                    
+
                 <img src="./images/bus-stop.png" alt="bus-stop" class="bus-stop" id="bus-stop">
             </div>
         </div>
@@ -41,20 +44,20 @@
         </div>
         <div class="bus" id="bus" onclick="pauseAnimation()">
         </div>
-       
+
     </div>
 
     <div class="gameover" id='gameover'></div><br>
     <div class="win" id='win'></div><br>
     <p id="scorecard" class="scorecard"></p>
-    
+
     <div class="modalbox" id="text">
         <div class="box">
             <a class="close" href="#">X</a>
             <p class="title">Enter Your Answer</p>
             <div class="content">
                 <form>
-                    <input type="text" name="answer" id="answer" placeholder="Enter Your Guess" required>
+                    <input type="text" name="answer" id="answer" placeholder="Enter Your Guess" autocomplete="off" required>
                     <input type="button" value="Check Answer" class="btn-success" value="" onclick="validateAnswer()">
                 </form>
             </div>
@@ -62,7 +65,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./js/index.js"></script>
-    
+
 </body>
 
 
