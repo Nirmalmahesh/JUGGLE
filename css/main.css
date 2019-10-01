@@ -30,8 +30,9 @@
 }
 .navbar-info{
     width: 80%;
-    height: 30px;
-    font-size: 17px;
+    height: 40px;
+    font-size: 25px;
+    font-family: cursive;
     position: absolute;
     
     border-radius: 50px;    
