@@ -8,7 +8,7 @@ stopAnimation = async() =>{
  
 loadMusic = () =>{
     let music = new Audio();
-    music.src = "../music/first.mp3";
+    music.src = "./first.mp3";
     music.play();
 }
 instruction=()=>{

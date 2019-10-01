@@ -41,7 +41,7 @@ mute = () =>{
     
 }
 var music = new Audio();
-    music.src = "../music/second.mp3";
+    music.src = "./second.mp3";
 pauseAnimation = () => {
 
     if (!isPaused) {
