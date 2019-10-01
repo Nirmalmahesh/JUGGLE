@@ -113,6 +113,9 @@ stopAnimation = async () => {
         building.style.animationPlayState = "paused";
         road.style.animationPlayState = "paused";
         bus_stop.style.animationPlayState = "paused";
+        let info = document.getElementById("navbar-info");
+        info.style.display = "none";
+        
     }, 4500);
 
 }
