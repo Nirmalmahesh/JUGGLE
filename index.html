@@ -9,12 +9,14 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
   <title>First</title>
 </head>
+
 <body onload="stopAnimation()" id="body">
-    
+
   <div class="first">
-      <div class="info">
-          <span class="tooltiptext">The bus contains defalut passenger of 15 memeber and in each stop many person and blah balh blah....</span>
-        </div>        
+    <div class="info">
+      <span class="tooltiptext">The bus contains defalut passenger of 15 memeber and in each stop many person and blah
+        balh blah....</span>
+    </div>
     <div class="stop">
       <marquee direction="right" class="juggle" scrollamount="6" loop="1" behavior="slide"><b><i>JUGGLE</i></b>
       </marquee>
@@ -27,12 +29,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./js/first.js"></script>
 <script>
-    $(document).ready(function()
-    {      
-      $("#body").keypress(function(){
-        window.location.href = "./first.html"; 
-      });
+  $(document).ready(function () {
+    $("#body").keypress(function () {
+      window.location.href = "./first.html";
     });
+  });
 </script>
 
 </html>
